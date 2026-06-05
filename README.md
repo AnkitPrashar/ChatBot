@@ -10,14 +10,13 @@ A real-time chatbot that connects to the Groq AI API and lets users have convers
  
 
 ## Tech Stack
+ React.js - Frontend UI framework 
+ JavaScript (ES6+) - Core logic and async handling 
+ CSS3 / Flexbox -  Styling and responsive layout 
+ Groq AI API -  LLM backend (llama-3.1-8b-instant) 
+ React Hooks -  State and side-effect management 
 
-| React.js | Frontend UI framework |
-| JavaScript (ES6+) | Core logic and async handling |
-| CSS3 / Flexbox | Styling and responsive layout |
-| Groq AI API | LLM backend (llama-3.1-8b-instant) |
-| React Hooks | State and side-effect management |
 
- 
 
 ## Features
 

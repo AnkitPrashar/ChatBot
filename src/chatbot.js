@@ -8,11 +8,17 @@ const groq = new Groq({
 
 export async function sendmsg(message) {
   const chat = await groq.chat.completions.create({
-    model: "llama-3.1-8b-instant",
-    messages: [{ role: "user", content: message }],
+    model: "openai/gpt-oss-20b",
+    messages: [
+      {
+        role: "user",
+        content: message,
+      },
+    ],
     max_tokens: 256,
     temperature: 0.7,
   });
 
   return chat.choices[0].message.content;
+
 }

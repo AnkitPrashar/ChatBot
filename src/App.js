@@ -5,10 +5,13 @@ import addbtn from "./assets/add-30.png";
 import msgicon from "./assets/message.svg";
 import home from "./assets/home.svg";
 import saved from "./assets/bookmark.svg";
- 
+
 import sendbtn from "./assets/send.svg";
 import usericon from "./assets/user-icon.png";
 import chatbotlogo from "./assets/chatbotlogo.png";
+import ReactMarkdown from "react-markdown";
+import "github-markdown-css/github-markdown.css";
+import remarkGfm from "remark-gfm";
 
 import { sendmsg } from "./chatbot";
 
@@ -140,7 +143,9 @@ function App() {
                 src={message.isbot ? chatbotlogo : usericon}
                 alt=""
               />
-              <p className="txt">{message.text} </p>
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {message.text}
+              </ReactMarkdown>
             </div>
           ))}
 
